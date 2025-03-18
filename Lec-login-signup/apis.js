@@ -28,7 +28,14 @@ const userRouter = require("./router/userRouter.js");
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/movie", movieRouter);
+app.use("/", function(req,res){
+  console.log("thank u for making req");
 
-app.listen(3003, function () {
-  console.log("Server started on port 3003");
+  res.status(200).send("Hello from server");
+});
+
+
+const port = process.env.PORT
+app.listen(port, function () {
+  console.log(`Server started on port ${port}`);
 });
