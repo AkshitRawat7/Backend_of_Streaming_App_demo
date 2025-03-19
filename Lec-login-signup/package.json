@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon apis.js"
+    "start": "node apis.js"
   },
   "keywords": [],
   "author": "",
